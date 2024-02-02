@@ -1,0 +1,61 @@
+/* 
+background: {
+  url('path')
+}
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+div {
+  height: 300px;
+  color: white;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  font-size: 2rem;
+}
+
+.big-img {
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(255,100,239,0.5)), url('./images/big.jpeg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+.small-img {
+  background: url('./images/small.jpeg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+}
+.folder-img {
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(255,100,239,0.5)), url('./images/folder-img.jpeg') center/cover no-repeat fixed;
+}
+
+.container {
+  width: 150px;
+  min-height: 150px;
+  margin: 5px;
+}
+
+.one {
+  background: linear-gradient(to top, black, white);
+}
+
+.two {
+  background: linear-gradient(to left, blue, green, purple, yellow);
+}
+
+.three {
+  background: linear-gradient(300deg, red, blue);
+}
+
+.four {
+  background: linear-gradient(to left, blue 30%, green 80%);
+}
