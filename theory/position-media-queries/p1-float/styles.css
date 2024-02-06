@@ -1,0 +1,19 @@
+.banner {
+  border: 3px solid gray;
+  padding: 10px;
+}
+
+.one {
+  float: left;
+}
+
+.two {
+  float: right;
+  height: 40px;
+  width: 40px;
+}
+
+p {
+  clear: both;
+}
+
