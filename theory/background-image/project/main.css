@@ -1,0 +1,75 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+   line-height: 1.5;
+}
+
+/* - .nav = height, background (#222), padding */
+.nav {
+    height: 5rem;
+    background: #222;
+    padding: 1rem 0;
+}
+
+/* - .nav-center = width, max-width, margin (place in the center) */
+.nav-center {
+    width: 90vw;
+    max-width: 1170px;
+    margin: 0 auto;
+}
+
+/* .nav-title = font-size, text-transform, font-weight, color(#fff),letter-spacing */
+.nav-title {
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: white;
+    letter-spacing: 2px;
+}
+
+/* .hero = background(linear-gradient, image),min-height(subtract nav height) */
+.hero {
+    background: linear-gradient(to right, brown, transparent), url('./img/hero-bcg.jpg') center/cover no-repeat;
+    min-height: calc(100vh - 5rem)
+}
+
+/* .hero-center (has to be the same width as nav-center) = width, max-width, margin,padding,color (#fff) */
+.hero-center {
+    width: 90vw;
+    max-width: 1170px;
+    height: 100%;
+    margin: 0 auto;
+    padding: 5rem 0;
+    color: white;
+}
+
+/* select h1 inside .hero-center = letter-spacing, text-transform, margin-bottom */
+.hero-center h1 {
+    letter-spacing: 2px;
+    text-transform: capitalize;
+    margin-bottom: .75rem;
+}
+
+/* select p inside .hero-center = max-width,margin-bottom */
+.hero-center p {
+    max-width: 95%;
+    margin-bottom: 10px;
+}
+
+/* .hero-btn = background, border, padding, text-transform, color(#fff), letter-spacing */
+.hero-btn {
+    background: transparent;
+    border: 1px solid white;
+    padding: .75rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+
+
+
