@@ -1,0 +1,32 @@
+/* 
+  inset: shorthand that correspons to the top, right, bottom, left properties
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.box {
+  width: 300px;
+  height: 300px;
+  margin: 10px;
+  background: orange;
+}
+
+.special {
+  position: relative;
+}
+
+.special h1 {
+  position: absolute;
+  inset: 0;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.5);
+  text-align: center;
+}
+
+
+
+

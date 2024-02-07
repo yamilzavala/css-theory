@@ -1,3 +1,7 @@
+/* 
+  static: default, always positioned according to the normal flow
+*/
+
 * {
   margin: 0;
   padding: 0;
