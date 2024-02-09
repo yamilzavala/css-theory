@@ -1,0 +1,14 @@
+div:hover {
+  background-color: orange;
+}
+
+.header:hover {
+  color: white;
+  background: black;
+  font-weight: bold;
+}
+
+a:hover {
+  color: red;
+  text-decoration: none;
+}

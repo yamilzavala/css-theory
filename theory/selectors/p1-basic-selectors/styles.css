@@ -1,0 +1,17 @@
+*{
+  color: red;
+}
+
+#someid {
+  color: blue;
+  text-transform: uppercase;
+}
+
+.someclass {
+  color: green;
+  text-transform: capitalize;
+}
+
+p {
+  color: black;
+}
