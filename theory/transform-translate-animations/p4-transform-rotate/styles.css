@@ -1,0 +1,17 @@
+div {
+  width: 150px;
+  height: 150px;
+  display: inline-block;
+}
+
+.one {
+  background: red;
+  transform: rotate(25deg)
+}
+.two {
+  background: blue;
+  transform: rotate(-25deg)
+}
+.three {
+  background: green;
+}

@@ -1,0 +1,19 @@
+div {
+  width: 150px;
+  height: 150px;
+  display: inline-block;
+}
+
+.one {
+  background: red;
+  transform: scaleX(0.5);
+}
+.two {
+  background: blue;
+  transform: scaleY(0.5);
+}
+.three {
+  background: green;
+  transform: scale(1.5, 1.2);
+  transform: scale(2);
+}
