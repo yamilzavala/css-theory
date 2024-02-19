@@ -1,0 +1,8 @@
+/*
+:not()
+:not() pseudo class represent elements that do not match a list of selectors
+*/
+
+.special :not(h2) {
+  color: red;
+}

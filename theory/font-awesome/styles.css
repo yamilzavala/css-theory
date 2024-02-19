@@ -1,0 +1,30 @@
+/*
+
+*/
+:root {
+  --hoverTransition: all .5s linear;
+  --borderColor: 2px solid gray;
+  --borderRadius: 5px;
+}
+
+.fa-solid {
+  font-size: 16rem;
+  color: red;
+  transition: var(--hoverTransition);
+}
+.fa-solid:hover {
+  font-size: 36rem;
+  color: blue;
+}
+.fa-mug-hot {
+  border: var(--borderColor);
+  border-radius: var(--borderRadius);
+}
+.special {
+  background-color: green;
+}
+
+.special-svg {
+  width: 100px;
+  height: 100px;
+}

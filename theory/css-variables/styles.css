@@ -1,0 +1,39 @@
+/*
+allow store a value in one place
+--varName: value
+property: var(--varName)
+
+scope
+:root{} === global
+element === local
+*/
+
+:root {
+  --primaryColor: red;
+  --secondaryColor: blue;
+  --mainTransition: all 1s linear;
+  --mainSpacing: 5px
+}
+
+h1 {
+  color: var(--primaryColor)
+}
+h2 {
+  color: var(--primaryColor)
+}
+div{
+  --thirdColor: yellow;
+}
+h3 {
+  /* this is not allow because is defined in an element dic, and is not global */
+  color: var(--thirdColor) 
+}
+
+p{
+  color: var(--thirdColor);
+  transition: var(--mainTransition);
+  letter-spacing: var(--mainSpacing);
+}
+p:hover {
+  background-color: var(--primaryColor)
+}

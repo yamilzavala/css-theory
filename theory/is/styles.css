@@ -1,0 +1,14 @@
+/*
+:is()
+is:() pseudo class function takes a selector list as its arguments, and select any element that can be selected by one selector on the list
+*/
+
+/* nav h2:hover, 
+section h2:hover, 
+header h2:hover {
+  color: red;
+} */
+
+:is(header, section, nav) h2:hover {
+  color: red;
+}

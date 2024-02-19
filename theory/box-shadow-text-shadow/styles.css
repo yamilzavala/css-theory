@@ -1,0 +1,13 @@
+/*
+text-shadow: x-value y-value blur-value
+box-shadow:  x-value y-value blur-value
+*/
+
+.box-shadow {
+  height: 200px;
+  width: 200px;
+  box-shadow: 10px 10px 15px greenyellow;
+}
+.text-shadow {
+  text-shadow: 5px 5px 5px purple;
+}
