@@ -147,6 +147,31 @@ p {
   background: var(--clr-primary-8);
 }
 
+.section {
+  padding: 5rem 0;
+}
+.section-title {
+  margin-bottom: 4rem;
+  text-align: center;
+}
+.section-title h2{
+  text-transform: uppercase;
+}
+.section-title span{
+ color: var(--clr-primary-5)
+}
+.section-center {
+  margin: 0 auto;
+  max-width: 1170px;
+  width: 90vw;
+}
+@media screen and (min-width: 992px) {
+  .section-center {
+    width: 95vw;
+  }
+}
+
+
 /*
 =============== 
 Navbar
@@ -219,6 +244,43 @@ About
 /* section add to globals */
 /* title add to globals */
 /* section center add to globals */
+
+.about-info, 
+.about-img {
+  margin-bottom: 2rem;  
+}
+
+@media screen and (min-width: 992px) {
+  .about-center {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  .about-info, 
+  .about-img {
+    flex: 0 0 calc(50% - 2rem);
+    margin-bottom: 0;
+    align-self: center;
+  }
+}
+
+@media screen and (min-width: 1170px) {
+  .about-img, .about-photo {
+    position: relative;
+  }
+
+  .about-img::before {
+    content: "";
+    position: absolute;
+    box-sizing: border-box;
+    top: -1.5rem;
+    left: -1.5rem;
+    width: 100%;
+    height: 100%;
+    border: solid 0.5rem var(--clr-primary-5);
+  }
+}
+
 
 /*
 =============== 
