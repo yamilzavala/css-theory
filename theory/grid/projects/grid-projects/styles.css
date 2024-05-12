@@ -1,0 +1,229 @@
+/* 
+============
+Variables
+============
+*/
+:root {
+  --primaryColor: #f15025;
+  --mainBlack: #222;
+  --mainWhite: #fff;
+  --offWhite: #f7f7f7;
+  --darkGrey: #afafaf;
+  --mainTransition: all 0.3s linear;
+  --mainSpacing: 0.2rem;
+}
+/* 
+============
+Global Styles
+============
+*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Fira Code", monospace;
+  color: var(--mainBlack);
+  background: var(--mainWhite);
+  line-height: 1.5;
+}
+a {
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+h1,
+h2,
+h3 {
+  text-transform: capitalize;
+  letter-spacing: var(--mainSpacing);
+  margin-bottom: 1.25rem;
+}
+h1 {
+  font-size: 3rem;
+}
+h2 {
+  margin-bottom: 0;
+}
+p {
+  font-weight: 300;
+  font-size: 0.7rem;
+  line-height: 2;
+}
+/* button */
+.btn {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  text-transform: capitalize;
+  border: 3px solid var(--primaryColor);
+  color: var(--primaryColor);
+  margin: 3rem;
+  transition: var(--mainTransition);
+}
+.btn:hover {
+  background: var(--primaryColor);
+  color: var(--mainWhite);
+}
+
+/* 
+============
+Main NAV Styles
+============
+*/
+
+.main-navbar {
+  background: var(--darkGrey);
+  padding: 0 2rem;
+} 
+.main-navbar li {
+  list-style: none;
+  padding: 1rem 0;
+} 
+.main-navbar a {
+  text-transform: capitalize;
+  cursor: pointer;
+  color: var(--primaryColor);
+  letter-spacing: var(--mainSpacing);
+  padding: 1rem 0;
+  transition: var(--mainTransition);
+} 
+.main-navbar a:hover {
+  color: var(--mainBlack);
+} 
+
+@media screen and (min-width: 992px) {
+  .main-navbar ul {
+    max-width: 1170px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 1rem 0;
+  }
+  .main-navbar ul {
+    text-align: center;    
+  }
+}
+
+/* 
+============
+Hero Styles
+============
+*/
+.hero-header {
+  display: grid;
+  grid-template-columns: 1fr;
+  align-content: center;
+  justify-items: center;
+  height: 100vh;
+  background: rgb(221, 66, 28);  
+  color: var(--mainWhite);
+}
+
+.hero-banner p { 
+  width: 80%;
+  max-width: 560px;
+  font-size: 1rem;
+}
+
+
+@media screen and (max-width: 600px) {
+  .hero-header {
+    padding: 0 3rem;    
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .hero-header {
+    background: linear-gradient(rgba(212, 47, 47, 0.70), rgba(0, 0, 0, 0.75) ), url(./images/image-2.jpeg) center/cover no-repeat fixed;    
+  }
+}
+
+/* 
+============
+Card Styles
+============
+*/
+
+.title {
+  text-align: center;
+}
+.cards {
+  padding: 4rem 0;
+}
+.cards-center {
+  width: 80vw;
+  max-width: 1170px;
+  margin: 2rem auto;
+}
+.card {
+  border: 1px solid var(--darkGrey);
+  margin-bottom: 3rem;
+}
+.card-info {
+  padding: 1rem;
+}
+.card-footer {
+  background: var(--darkGrey);
+  padding: 0.5rem 1rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-items: center;
+}
+.card-footer span {
+  color: var(--primaryColor);
+}
+
+.card {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr auto;
+}
+
+/*  ------ with media queries ------ */
+/* @media screen and (min-width: 768px) {
+  .cards-center {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 2rem;    
+  }
+}
+
+@media screen and (min-width: 1170px) {
+  .cards-center {
+    grid-template-columns: repeat(3, 1fr);
+  }
+} */
+
+/* ------ with minmax ------ */
+/* 
+      1rem = 16px
+      max-width: 1170px
+      grid-column-gap: 2rem;
+
+      ##TWO COLUMNS LAYOUT
+      2 columns grid layout (one gap column between the two columns  -> 2rem)      --> gap: 2rem --> 32px
+          column width = (max-width - total-grid-column-gap) / totals-columns-per-row -> (1170px - 32px) / 2 = 569px (column width)
+
+      ##THREE COLUMNS LAYOUT    
+      3 columns grid layout (two gap column between the three columns -> 2rem * 2)  --> gap: 4rem --> 64px
+          column width = (max-width - total-grid-column-gap) / totals-columns-per-row -> (1170px - (32px * 2)) / 3 = 368.66px (column width)
+
+      ##FOUR COLUMNS LAYOUT    
+      4 columns grid layout (three gap column between the four columns -> 2rem * 3)  --> gap: 6rem --> 96px
+          column width = (max-width - total-grid-column-gap) / totals-columns-per-row -> (1170px - (32px * 3)) / 4 = 368.66px (column width)
+*/
+.cards-center {
+  display: grid;
+  grid-column-gap: 2rem;
+  /* three colums layout (2rem * 2 = 64px)*/
+  /* grid-template-columns: repeat(auto-fit, minmax(368px, 1fr)); */
+  /* grid-template-columns: repeat(auto-fill, minmax(368px, 1fr)); */
+  
+  /* four colums layout (2rem * 3 = 96px)*/
+  grid-template-columns: repeat(auto-fill, minmax(268.5px, 1fr));
+}
