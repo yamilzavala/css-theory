@@ -299,7 +299,118 @@ Tiles Styles
   .tile-9 {
     grid-area: i;
   }
-
 }
+
+/* 
+============
+Layout Styles
+============
+*/
+main{
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto auto 1fr auto auto;
+}
+.layout-header {
+  text-align: center;
+  padding: 0.5rem 0;
+  background: var(--primaryColor);
+  color: var(--mainWhite)
+}
+
+.layout-navbar {
+  background: var(--darkGrey);
+}
+
+.layout-navbar li {
+ list-style-type: none;
+}
+.layout-navbar a {
+  color: var(--mainBlack);
+  padding: 1rem 2rem;
+  display: inline-block;
+  text-transform: capitalize;
+  letter-spacing: var(--mainSpacing);
+  font-size: 1.2rem;
+  transition: var(--mainTransition);
+}
+.layout-navbar a:hover {
+  color: var(--mainWhite);
+}
+.layout-content {
+  padding: 2rem;
+  font-size: 1rem;
+}
+.layout-sidebar{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 1rem 0;
+  background: var(--primaryColor);
+  color: var(--mainWhite);
+  justify-items: center;  
+  font-size: 1.2rem;
+}
+.layout-footer {
+  background: var(--mainBlack);
+  color: var(--mainWhite);
+  text-align: center;
+  letter-spacing: var(--mainSpacing);
+  text-transform: capitalize;
+  padding: 0.5rem 0;
+}
+.layout-footer p{
+  font-size: 1.2rem;
+}
+@media screen and (min-width: 768px) {
+  .layout-navbar ul {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-items: center;
+  }
+}
+@media screen and (min-width: 1170px) {
+  .main-layout {
+    grid-template-areas: 
+    'header header header'
+    'navbar content sidebar'
+    'navbar content sidebar'
+    'navbar content sidebar'
+    'navbar content sidebar'
+    'footer footer footer'
+    ;
+  }
+  .layout-header {
+    grid-area: header;
+  }
+  .layout-navbar {
+    grid-area: navbar;
+  }
+  .layout-navbar ul {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 1fr);
+    padding: 1rem;
+    align-items: center;
+    height: 100%;
+  }
+  .layout-content{
+    grid-area: content
+  }
+  .layout-sidebar{
+    grid-area: sidebar;
+    background: var(--darkGrey);
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 1fr);
+    padding: 1rem;
+    align-items: center;
+  }
+  .layout-footer{
+    grid-area: footer
+  }
+}
+
+
+
+
+
 
 
